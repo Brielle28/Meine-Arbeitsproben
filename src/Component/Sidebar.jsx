@@ -1,6 +1,6 @@
 const Sidebar = ({ setActiveTab }) => {
     return (
-      <div className="w-32 h-[400px] bg-gray-800 text-white p-6">
+      <div className="w-[10%] h-[400px] bg-gray-800 text-white p-6">
         <ul className="">
           <li>
             <button

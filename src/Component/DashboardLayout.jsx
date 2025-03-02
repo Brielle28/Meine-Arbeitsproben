@@ -1,24 +1,24 @@
-// src/components/DashboardLayout.jsx
-import { useState } from 'react';
-import Sidebar from './Sidebar';
-import AboutMe from './AboutMe';
-import Contact from './Contact';
-import ProfilePicture from './ProfilePicture';
-import Resume from './Resume';
-import Projects from './Projects';
-
+import { useState } from "react";
+import Sidebar from "./Sidebar";
+import AboutMe from "./AboutMe";
+import Contact from "./Contact";
+import ProfilePicture from "./ProfilePicture";
+import Resume from "./Resume";
+import Projects from "./Projects";
+import ParticlesComponent from "./ParticlesComponent";
+import "../App.css";
 const DashboardLayout = () => {
-  const [activeTab, setActiveTab] = useState('about');
+  const [activeTab, setActiveTab] = useState("about");
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'about':
+      case "about":
         return <AboutMe />;
-      case 'projects':
+      case "projects":
         return <Projects />;
-      case 'contact':
+      case "contact":
         return <Contact />;
-        case 'resume':
+      case "resume":
         return <Resume />;
       default:
         return <AboutMe />;
@@ -26,13 +26,14 @@ const DashboardLayout = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-[100px] min-h-screen bg-gray-100">
-      <Sidebar setActiveTab={setActiveTab} />
-      <ProfilePicture/>
-      <main className="h-[400px] w-[50%]">
-        {renderContent()}
-      </main>
-    </div>
+    <>
+      <ParticlesComponent id="particles" />
+      <div className="flex items-center justify-center gap-[30px] px-[50px] min-h-screen bg-transparent relative z-10 text-white">
+        <Sidebar setActiveTab={setActiveTab} />
+        <ProfilePicture />
+        <main className="h-[500px] w-[53%] bg-pink-500">{renderContent()}</main>
+      </div>
+    </>
   );
 };
 
