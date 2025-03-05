@@ -1,42 +1,78 @@
+import { FaBarsStaggered } from "react-icons/fa6";
+import ThemeController from "./ThemeController";
+import { IoPerson } from "react-icons/io5";
+import { CgLoadbarDoc } from "react-icons/cg";
+import { FaToolbox } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa";
 const Sidebar = ({ setActiveTab }) => {
-    return (
-      <div className="w-[10%] h-[400px] bg-gray-800 text-white p-6">
-        <ul className="">
-          <li>
+  return (
+    <div className="flex flex-col items-center justify-center bg-transparent text-white p-6">
+      <button className="bg-white p-3 shadow-2xl rounded-full text-black hover:text-pink-600 ">
+        {" "}
+        <FaBarsStaggered className="text-[25px]" />{" "}
+      </button>
+      <button className="bg-white p-4 shadow-2xl rounded-full text-black my-5">
+        {" "}
+        <ThemeController />
+      </button>
+      <ul className="bg-white text-black space-y-3 py-10 rounded-4xl px-2 shadow-2xl">
+        <li>
+          <div
+            className="tooltip tooltip-right tooltip-secondary"
+            data-tip="ABOUT"
+          >
             <button
-              onClick={() => setActiveTab('about')}
-              className="w-full text-left hover:bg-gray-700 p-2 rounded"
+              onClick={() => setActiveTab("about")}
+              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
             >
-              About Me
+              <IoPerson className="text-[25px]"/>
             </button>
-          </li>
-          <li>
+          </div>
+        </li>
+        <li>
+          <div
+            className="tooltip tooltip-right tooltip-secondary"
+            data-tip="RESUME"
+          >
             <button
-              onClick={() => setActiveTab('resume')}
-              className="w-full text-left hover:bg-gray-700 p-2 rounded"
+              onClick={() => setActiveTab("resume")}
+              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
             >
-              Resume
+              <CgLoadbarDoc className="text-[25px]"/>
             </button>
-          </li>
-          <li>
+          </div>
+        </li>
+        <li>
+          <div
+            className="tooltip tooltip-right tooltip-secondary"
+            data-tip="PROJECT"
+          >
             <button
-              onClick={() => setActiveTab('projects')}
-              className="w-full text-left hover:bg-gray-700 p-2 rounded"
+              onClick={() => setActiveTab("projects")}
+              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
+
             >
-              Projects
+              <FaToolbox  className="text-[25px]"/>
             </button>
-          </li>
-          <li>
+          </div>
+        </li>
+        <li>
+          <div
+            className="tooltip tooltip-right tooltip-secondary"
+            data-tip="CONTACT ME"
+          >
             <button
-              onClick={() => setActiveTab('contact')}
-              className="w-full text-left hover:bg-gray-700 p-2 rounded"
+              onClick={() => setActiveTab("contact")}
+              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
+
             >
-              Contact Me
+              <FaPaperPlane  className="text-[25px]"/>
             </button>
-          </li>
-        </ul>
-      </div>
-    );
-  };
-  
-  export default Sidebar;
+          </div>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Sidebar;
