@@ -6,8 +6,8 @@ import { FaToolbox } from "react-icons/fa";
 import { FaPaperPlane } from "react-icons/fa";
 const Sidebar = ({ setActiveTab }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-transparent text-white p-6">
-      <button className="bg-white p-3 shadow-2xl rounded-full text-black hover:text-pink-600 ">
+    <div className="flex flex-col items-center justify-center bg-transparent text-white">
+      <button className="bg-white p-3 shadow-2xl rounded-full text-black ">
         {" "}
         <FaBarsStaggered className="text-[25px]" />{" "}
       </button>

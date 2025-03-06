@@ -28,7 +28,7 @@ const DashboardLayout = () => {
   return (
     <>
       <ParticlesComponent id="particles" />
-      <div className="flex items-center justify-center gap-[30px] px-[50px] min-h-screen bg-transparent relative z-10 text-white">
+      <div className="flex items-center justify-center gap-[20px] px-[50px] min-h-screen bg-transparent relative z-10 text-white">
         <Sidebar setActiveTab={setActiveTab} />
         <ProfilePicture />
         <main className="h-[500px] w-[53%] bg-pink-500">{renderContent()}</main>
