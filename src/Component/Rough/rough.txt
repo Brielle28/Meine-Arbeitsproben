@@ -1,0 +1,355 @@
+import { useEffect, useState } from "react";
+import { BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+
+const ProfilePicture = () => {
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true); // Track typing state
+  const [currentTextIndex, setCurrentTextIndex] = useState(0); // Track which text is being typed
+
+  const texts = ["SOFTWARE DEVELOPER", "FRONT END DEVELOPER"]; // Array of texts to cycle through
+  const delay = 150; // Typing speed
+  const pauseDuration = 1000; // Pause duration after typing (1 second)
+
+  useEffect(() => {
+    let timeout;
+
+    if (isTyping) {
+      // Typing logic
+      if (currentIndex < texts[currentTextIndex].length) {
+        timeout = setTimeout(() => {
+          setCurrentText((prevText) => prevText + texts[currentTextIndex][currentIndex]);
+          setCurrentIndex((prevIndex) => prevIndex + 1);
+        }, delay);
+      } else {
+        // Pause after typing is complete
+        timeout = setTimeout(() => {
+          setIsTyping(false); // Stop typing
+        }, pauseDuration);
+      }
+    } else {
+      // Start deleting text
+      if (currentIndex > 0) {
+        timeout = setTimeout(() => {
+          setCurrentText((prevText) => prevText.slice(0, -1)); // Remove last character
+          setCurrentIndex((prevIndex) => prevIndex - 1);
+        }, delay / 2); // Faster deletion speed
+      } else {
+        // Switch to the next text after deletion is complete
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cycle through texts
+        setIsTyping(true); // Start typing the next text
+      }
+    }
+
+    return () => clearTimeout(timeout); // Cleanup timeout
+  }, [currentIndex, isTyping, currentTextIndex]);
+
+  return (
+    <div className="flex flex-col items-center justify-center h-[500px] bg-white w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
+     
+      <div
+        className="bg-[url('/me.jpg')] mt-3 w-[280px] h-[280px] bg-cover bg-no-repeat rounded-b-[40px] rounded-tl-[40px]"
+        alt="Profile Picture"
+      ></div>
+
+      <h1 className="mt-7 text-pink-500">
+        {currentText}
+        {isTyping && <span className="animate-blink">_</span>}
+      </h1>
+
+  
+      <h1 className="font-bold text-black text-[25px]">Chukwuemerie Clara</h1>
+
+      <div className="flex items-center justify-center gap-5 mt-5">
+        <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+          <BsLinkedin className="text-[22px]" />
+        </button>
+        <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+          <FaGithub className="text-[22px]" />
+        </button>
+        <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+          <FaXTwitter className="text-[22px]" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProfilePicture;
+// import "./ProfilePicture.css"
+// import { useEffect, useState } from "react";
+// import { BsLinkedin } from "react-icons/bs";
+// import { FaGithub } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
+
+// const ProfilePicture = () => {
+//   const [currentText, setCurrentText] = useState("");
+//   const [currentIndex, setCurrentIndex] = useState(0);
+//   const [isTyping, setIsTyping] = useState(true); // Track typing state
+//   const [currentTextIndex, setCurrentTextIndex] = useState(0); // Track which text is being typed
+//   const [isGlitching, setIsGlitching] = useState(false); // Track glitch state
+
+//   const texts = ["SOFTWARE DEVELOPER", "FRONT END DEVELOPER"]; // Array of texts to cycle through
+//   const delay = 150; // Typing speed
+//   const pauseDuration = 1000; // Pause duration after typing (1 second)
+
+//   // Typing and deleting logic
+//   useEffect(() => {
+//     let timeout;
+
+//     if (isTyping) {
+//       // Typing logic
+//       if (currentIndex < texts[currentTextIndex].length) {
+//         timeout = setTimeout(() => {
+//           setCurrentText((prevText) => prevText + texts[currentTextIndex][currentIndex]);
+//           setCurrentIndex((prevIndex) => prevIndex + 1);
+//         }, delay);
+//       } else {
+//         // Pause after typing is complete
+//         timeout = setTimeout(() => {
+//           setIsTyping(false); // Stop typing
+//         }, pauseDuration);
+//       }
+//     } else {
+//       // Start deleting text
+//       if (currentIndex > 0) {
+//         timeout = setTimeout(() => {
+//           setCurrentText((prevText) => prevText.slice(0, -1)); // Remove last character
+//           setCurrentIndex((prevIndex) => prevIndex - 1);
+//         }, delay / 2); // Faster deletion speed
+//       } else {
+//         // Switch to the next text after deletion is complete
+//         setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cycle through texts
+//         setIsTyping(true); // Start typing the next text
+//       }
+//     }
+
+//     return () => clearTimeout(timeout); // Cleanup timeout
+//   }, [currentIndex, isTyping, currentTextIndex]);
+
+//   // Glitch effect at intervals
+//   useEffect(() => {
+//     const glitchInterval = setInterval(() => {
+//       setIsGlitching((prev) => !prev); // Toggle glitch state
+//       console.log("Glitch toggled:", isGlitching); // Debugging: Check if state is toggling
+//     }, 1000); // Glitch every 3 seconds
+
+//     return () => clearInterval(glitchInterval); // Cleanup interval
+//   }, []);
+
+//   return (
+//     <div className="flex flex-col items-center justify-center h-[500px] bg-white w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
+//       {/* Profile Picture with Glitch Effect */}
+//       <div className={`relative mt-3 w-[280px] h-[280px] rounded-b-[40px] rounded-tl-[40px] overflow-hidden ${
+//         isGlitching ? "glitch-effect" : ""
+//       }`}>
+//         <div
+//           className="bg-[url('/me.jpg')] w-full h-full bg-cover bg-no-repeat"
+//           alt="Profile Picture"
+//         ></div>
+//       </div>
+
+//       {/* Typewriter Effect with Underscore */}
+//       <h1 className="mt-7 text-pink-500">
+//         {currentText}
+//         {isTyping && <span className="animate-blink">_</span>}
+//       </h1>
+
+//       {/* Name */}
+//       <h1 className="font-bold text-black text-[25px]">Chukwuemerie Clara</h1>
+
+//       {/* Social Media Buttons */}
+//       <div className="flex items-center justify-center gap-5 mt-5">
+//         <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+//           <BsLinkedin className="text-[22px]" />
+//         </button>
+//         <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+//           <FaGithub className="text-[22px]" />
+//         </button>
+//         <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+//           <FaXTwitter className="text-[22px]" />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProfilePicture;
+
+
+export default ProfilePicture;
+
+// import { useEffect, useState } from "react";
+// import { BsLinkedin } from "react-icons/bs";
+// import { FaGithub } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
+
+// const ProfilePicture = () => {
+//   // Typing effect states
+//   const [currentText, setCurrentText] = useState("");
+//   const [currentIndex, setCurrentIndex] = useState(0);
+//   const [isTyping, setIsTyping] = useState(true);
+//   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  
+//   // Glitch effect state
+//   const [isGlitching, setIsGlitching] = useState(false);
+
+//   const texts = ["SOFTWARE DEVELOPER", "FRONT END DEVELOPER"];
+//   const delay = 150;
+//   const pauseDuration = 1000;
+//   const glitchInterval = 2000; // Trigger glitch every 2 seconds
+//   const glitchDuration = 500; // Glitch effect lasts for 500ms
+  
+//   // Number of face slices for glitch effect
+//   const numberOfSlices = 8;
+
+//   // Typing effect
+//   useEffect(() => {
+//     let timeout;
+
+//     if (isTyping) {
+//       if (currentIndex < texts[currentTextIndex].length) {
+//         timeout = setTimeout(() => {
+//           setCurrentText((prevText) => prevText + texts[currentTextIndex][currentIndex]);
+//           setCurrentIndex((prevIndex) => prevIndex + 1);
+//         }, delay);
+//       } else {
+//         timeout = setTimeout(() => {
+//           setIsTyping(false);
+//         }, pauseDuration);
+//       }
+//     } else {
+//       if (currentIndex > 0) {
+//         timeout = setTimeout(() => {
+//           setCurrentText((prevText) => prevText.slice(0, -1));
+//           setCurrentIndex((prevIndex) => prevIndex - 1);
+//         }, delay / 2);
+//       } else {
+//         setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+//         setIsTyping(true);
+//       }
+//     }
+
+//     return () => clearTimeout(timeout);
+//   }, [currentIndex, isTyping, currentTextIndex]);
+
+//   // Glitch effect interval
+//   useEffect(() => {
+//     const glitchTimer = setInterval(() => {
+//       setIsGlitching(true);
+      
+//       // Turn off glitch effect after glitchDuration
+//       setTimeout(() => {
+//         setIsGlitching(false);
+//       }, glitchDuration);
+//     }, glitchInterval);
+
+//     return () => clearInterval(glitchTimer);
+//   }, []);
+
+//   // Generate slices dynamically
+//   const generateGlitchSlices = () => {
+//     const slices = [];
+//     const sliceHeight = 100 / numberOfSlices;
+    
+//     for (let i = 0; i < numberOfSlices; i++) {
+//       // Calculate position and random displacement
+//       const top = i * sliceHeight;
+//       const height = sliceHeight;
+      
+//       // Create unique animation parameters for each slice
+//       const animSpeed = 100 + Math.floor(Math.random() * 100); // 100-200ms
+//       const randomDisplacement = (Math.random() * 5) - 2.5; // -2.5% to 2.5%
+      
+//       slices.push(
+//         <div
+//           key={i}
+//           className="absolute bg-[url('/me.jpg')] bg-cover"
+//           style={{
+//             top: `${top}%`,
+//             left: '0',
+//             height: `${height}%`,
+//             width: '100%',
+//             transform: `translateX(${randomDisplacement}%)`,
+//             // Set background position to show the correct part of the face
+//             backgroundPosition: `center ${-top}%`,
+//             // Set background size larger to ensure the entire face portion is visible
+//             backgroundSize: `100% ${numberOfSlices * 100}%`,
+//             // Customize animation for each slice
+//             animation: `slice-anim-${i} ${animSpeed}ms infinite step-end`
+//           }}
+//         ></div>
+//       );
+//     }
+    
+//     return slices;
+//   };
+
+//   return (
+//     <div className="flex flex-col items-center justify-center h-[500px] bg-white w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
+//       <div className="relative mt-3 w-[280px] h-[280px] overflow-hidden rounded-b-[40px] rounded-tl-[40px]">
+//         {/* Base image - display when not glitching */}
+//         <div
+//           className={`absolute inset-0 bg-[url('/me.jpg')] bg-cover bg-center ${isGlitching ? 'opacity-0' : 'opacity-100'}`}
+//           alt="Profile Picture"
+//         ></div>
+        
+//         {/* Glitch effect - only visible when isGlitching is true */}
+//         {isGlitching && (
+//           <>
+//             {/* Dynamically generated face slices */}
+//             {generateGlitchSlices()}
+            
+//             {/* Digital noise overlay */}
+//             <div
+//               className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none"
+//               style={{
+//                 backgroundImage: 'url("data:image/png;base64,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")',
+//               }}
+//             ></div>
+            
+//             {/* Horizontal scan lines */}
+//             <div className="absolute inset-0 mix-blend-overlay" style={{
+//               background: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px)'
+//             }}></div>
+//           </>
+//         )}
+        
+//         {/* CSS Animations - dynamically generated */}
+//         <style jsx>{`
+//           ${Array.from({ length: numberOfSlices }).map((_, i) => `
+//             @keyframes slice-anim-${i} {
+//               0%, 100% { transform: translateX(${(Math.random() * 4) - 2}%); }
+//               25% { transform: translateX(${(Math.random() * 4) - 2}%); }
+//               50% { transform: translateX(${(Math.random() * 4) - 2}%); }
+//               75% { transform: translateX(${(Math.random() * 4) - 2}%); }
+//             }
+//           `).join('\n')}
+//         `}</style>
+//       </div>
+
+//       <h1 className="mt-7 text-pink-500">
+//         {currentText}
+//         {isTyping && <span className="animate-blink">_</span>}
+//       </h1>
+
+//       <h1 className="font-bold text-black text-[25px]">Chukwuemerie Clara</h1>
+
+//       <div className="flex items-center justify-center gap-5 mt-5">
+//         <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+//           <BsLinkedin className="text-[22px]" />
+//         </button>
+//         <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+//           <FaGithub className="text-[22px]" />
+//         </button>
+//         <button className="p-3 border-[1px] border-gray-400 rounded-[10px] hover:text-pink-500">
+//           <FaXTwitter className="text-[22px]" />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProfilePicture;

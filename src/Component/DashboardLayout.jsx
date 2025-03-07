@@ -2,7 +2,7 @@ import { useState } from "react";
 import Sidebar from "./Sidebar";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
-import ProfilePicture from "./ProfilePicture";
+import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import Resume from "./Resume";
 import Projects from "./Projects";
 import ParticlesComponent from "./ParticlesComponent";
