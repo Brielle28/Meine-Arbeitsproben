@@ -59,7 +59,7 @@ const ProfilePicture = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[500px] bg-white w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
+    <div className="flex flex-col items-center justify-center h-[500px] bg-white dark:bg-[#111111]  w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
       <div className="relative mt-3 w-[280px] h-[280px] overflow-hidden rounded-b-[40px] rounded-tl-[40px]">
         {/* Profile Image */}
         <div
@@ -125,7 +125,7 @@ const ProfilePicture = () => {
           {isTyping && <span className="animate-blink">_</span>}
         </h1>
       
-      <h1 className="font-bold text-black text-[25px]">Chukwuemerie Clara</h1>
+      <h1 className="font-bold dark:text-white text-black text-[25px]">Chukwuemerie Clara</h1>
 
       <div className="flex items-center justify-center gap-5 mt-5">
         <a
@@ -134,7 +134,7 @@ const ProfilePicture = () => {
           rel="noopener noreferrer"
           className="p-3 border border-gray-400 rounded-[10px] hover:text-pink-500"
         >
-          <BsLinkedin className="text-[22px]" />
+          <BsLinkedin className="text-[22px] dark:text-white" />
         </a>
         <a
           href="https://github.com/Brielle28"
@@ -142,7 +142,7 @@ const ProfilePicture = () => {
           rel="noopener noreferrer"
           className="p-3 border border-gray-400 rounded-[10px] hover:text-pink-500"
         >
-          <FaGithub className="text-[22px]" />
+          <FaGithub className="text-[22px] dark:text-white" />
         </a>
         <a
           href="https://twitter.com"
@@ -150,7 +150,7 @@ const ProfilePicture = () => {
           rel="noopener noreferrer"
           className="p-3 border border-gray-400 rounded-[10px] hover:text-pink-500"
         >
-          <FaXTwitter className="text-[22px]" />
+          <FaXTwitter className="text-[22px] dark:text-white" />
         </a>
       </div>
 

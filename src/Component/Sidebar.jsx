@@ -6,16 +6,16 @@ import { FaToolbox } from "react-icons/fa";
 import { FaPaperPlane } from "react-icons/fa";
 const Sidebar = ({ setActiveTab }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-transparent text-white">
-      <button className="bg-white p-3 shadow-2xl rounded-full text-black ">
+    <div className="flex flex-col items-center justify-center bg-transparent">
+      <button className="bg-white dark:bg-[#131313] dark:text-white hover:text-pink-500 p-3 shadow-2xl rounded-full text-black ">
         {" "}
         <FaBarsStaggered className="text-[25px]" />{" "}
       </button>
-      <button className="bg-white p-4 shadow-2xl rounded-full text-black my-5">
+      <button className="bg-white dark:bg-[#131313] dark:text-white hover:text-pink-500 p-4 shadow-2xl rounded-full text-black my-5">
         {" "}
         <ThemeController />
       </button>
-      <ul className="bg-white text-black space-y-3 py-10 rounded-4xl px-2 shadow-2xl">
+      <ul className="bg-white text-black dark:bg-[#131313] dark:text-white space-y-3 py-10 rounded-4xl px-2 shadow-2xl">
         <li>
           <div
             className="tooltip tooltip-right tooltip-secondary"
@@ -23,9 +23,9 @@ const Sidebar = ({ setActiveTab }) => {
           >
             <button
               onClick={() => setActiveTab("about")}
-              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
+              className="w-full text-left hover:text-pink-600 p-3  dark:text-white bg-[#FAFAFA] dark:bg-[#1C1C1C] rounded-full"
             >
-              <IoPerson className="text-[25px]"/>
+              <IoPerson className="text-[25px]" />
             </button>
           </div>
         </li>
@@ -36,9 +36,9 @@ const Sidebar = ({ setActiveTab }) => {
           >
             <button
               onClick={() => setActiveTab("resume")}
-              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
+              className="w-full text-left hover:text-pink-600 p-3  dark:text-white bg-[#FAFAFA] dark:bg-[#1C1C1C] rounded-full"
             >
-              <CgLoadbarDoc className="text-[25px]"/>
+              <CgLoadbarDoc className="text-[25px]" />
             </button>
           </div>
         </li>
@@ -49,10 +49,9 @@ const Sidebar = ({ setActiveTab }) => {
           >
             <button
               onClick={() => setActiveTab("projects")}
-              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
-
+              className="w-full text-left hover:text-pink-600 p-3  dark:text-white bg-[#FAFAFA] dark:bg-[#1C1C1C] rounded-full"
             >
-              <FaToolbox  className="text-[25px]"/>
+              <FaToolbox className="text-[25px]" />
             </button>
           </div>
         </li>
@@ -63,10 +62,9 @@ const Sidebar = ({ setActiveTab }) => {
           >
             <button
               onClick={() => setActiveTab("contact")}
-              className="w-full text-left hover:text-pink-600 p-3 bg-[#FAFAFA] rounded-full"
-
+              className="w-full text-left hover:text-pink-600 p-3  dark:text-white bg-[#FAFAFA] dark:bg-[#1C1C1C] rounded-full"
             >
-              <FaPaperPlane  className="text-[25px]"/>
+              <FaPaperPlane className="text-[25px]" />
             </button>
           </div>
         </li>

@@ -1,4 +1,3 @@
-
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
@@ -9,8 +8,36 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 
 
 const ParticlesComponent = (props) => {
-
   const [init, setInit] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check if user had a preference stored or use system setting
+    return (
+      localStorage.theme === 'dark' || 
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    );
+  });
+  
+  // Update dark mode state when theme changes
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDarkMode(
+        document.documentElement.classList.contains('dark')
+      );
+    };
+    
+    // Check initially
+    checkDarkMode();
+    
+    // Set up a mutation observer to watch for class changes on the html element
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, { 
+      attributes: true, 
+      attributeFilter: ['class'] 
+    });
+    
+    return () => observer.disconnect();
+  }, []);
+
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -30,12 +57,11 @@ const ParticlesComponent = (props) => {
     console.log(container);
   };
 
-
   const options = useMemo(
     () => ({
       background: {
         color: {
-          value: "#FFFFFF",
+          value: isDarkMode ? "#171717" : "#FFFFFF",
         },
       },
       fpsLimit: 120,
@@ -99,9 +125,8 @@ const ParticlesComponent = (props) => {
       },
       detectRetina: true,
     }),
-    [],
+    [isDarkMode], // Add isDarkMode as a dependency so options update when theme changes
   );
-
 
   return <Particles id={props.id} init={particlesLoaded} options={options} />; 
 };

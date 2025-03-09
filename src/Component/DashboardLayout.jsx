@@ -5,7 +5,7 @@ import Contact from "./Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import Resume from "./Resume";
 import Projects from "./Projects";
-import ParticlesComponent from "./ParticlesComponent";
+import ParticlesComponent from "../Component/Particles/ParticlesComponent";
 import "../App.css";
 const DashboardLayout = () => {
   const [activeTab, setActiveTab] = useState("about");
