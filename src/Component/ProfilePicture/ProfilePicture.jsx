@@ -1,52 +1,14 @@
 import { useEffect, useState } from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import TypeWriting from "../TypeWriting/TypeWriting";
 
 const ProfilePicture = () => {
-  // Typing effect states
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-
   // Glitch effect state
   const [isGlitching, setIsGlitching] = useState(false);
 
-  const texts = ["SOFTWARE DEVELOPER", "FRONT-END DEVELOPER"];
-  const delay = 150;
-  const pauseDuration = 1000;
   const glitchInterval = 5000; // Trigger glitch every 3 seconds
   const glitchDuration = 200; // Glitch effect lasts for 200ms
-
-  // Typing effect
-  useEffect(() => {
-    let timeout;
-
-    if (isTyping) {
-      if (currentIndex < texts[currentTextIndex].length) {
-        timeout = setTimeout(() => {
-          setCurrentText(
-            (prevText) => prevText + texts[currentTextIndex][currentIndex]
-          );
-          setCurrentIndex((prevIndex) => prevIndex + 1);
-        }, delay);
-      } else {
-        timeout = setTimeout(() => setIsTyping(false), pauseDuration);
-      }
-    } else {
-      if (currentIndex > 0) {
-        timeout = setTimeout(() => {
-          setCurrentText((prevText) => prevText.slice(0, -1));
-          setCurrentIndex((prevIndex) => prevIndex - 1);
-        }, delay / 2);
-      } else {
-        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        setIsTyping(true);
-      }
-    }
-
-    return () => clearTimeout(timeout);
-  }, [currentIndex, isTyping, currentTextIndex]);
 
   // Glitch effect interval
   useEffect(() => {
@@ -59,7 +21,7 @@ const ProfilePicture = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[500px] bg-white dark:bg-[#111111]  w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
+    <div className="mt-36 w-full md:mt-0 flex flex-col items-center justify-center md:h-[500px] bg-white dark:bg-[#131313]  md:w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
       <div className="relative mt-3 w-[280px] h-[280px] overflow-hidden rounded-b-[40px] rounded-tl-[40px]">
         {/* Profile Image */}
         <div
@@ -119,13 +81,14 @@ const ProfilePicture = () => {
           </>
         )}
       </div>
-      
-        <h1 className="mt-7 text-pink-500 h-[30px] bg-transparent">
-          {currentText}
-          {isTyping && <span className="animate-blink">_</span>}
-        </h1>
-      
-      <h1 className="font-bold dark:text-white text-black text-[25px]">Chukwuemerie Clara</h1>
+
+      <div className="mt-5 md:mt-0">
+        <TypeWriting />
+      </div>
+
+      <h1 className="font-bold dark:text-white text-black text-[25px]">
+        Chukwuemerie Clara
+      </h1>
 
       <div className="flex items-center justify-center gap-5 mt-5">
         <a
