@@ -21,7 +21,7 @@ const ProfilePicture = () => {
   }, []);
 
   return (
-    <div className="mt-20 w-full md:mt-0 lg:mt-4 flex flex-col items-center justify-center md:h-[500px] lg:h-[80vh] bg-white dark:bg-[#131313] md:w-[75%] lg:w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4 bg-yellow-700">
+    <div className="mt-20 w-full md:mt-0 lg:mt-4 flex flex-col items-center justify-center md:h-[500px] lg:h-[80vh] bg-white dark:bg-[#131313] md:w-[75%] lg:w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
       <div className="relative mt-3 w-[280px] h-[280px] overflow-hidden rounded-b-[40px] rounded-tl-[40px]">
         {/* Profile Image */}
         <div

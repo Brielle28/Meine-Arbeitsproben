@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Sidebar from "./Sidebar";
-import AboutMe from "./AboutMe";
+import AboutMe from "./AboutMe/AboutMe";
 import Contact from "./Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import Resume from "./Resume";
@@ -54,7 +54,7 @@ const DashboardLayout = () => {
         <div className="flex flex-col items-center w-full lg:flex-row lg:items-start lg:justify-center lg:gap-10 md:gap-10 mt-20 lg:mt-0">
           <ProfilePicture />
 
-          <main className="w-full md:w-[75%] lg:w-[53%] h-[70vh] md:h-[80vh] lg:h-[80vh] overflow-y-auto mt-4 rounded-b-[40px] rounded-tr-[40px] shadow-2xl hide-scrollbar bg-pink-500">
+          <main className="w-full md:w-[75%] lg:w-[53%] h-[70vh] md:h-[80vh] lg:h-[80vh] overflow-y-auto mt-4 rounded-b-[40px] rounded-tr-[40px] shadow-2xl hide-scrollbar bg-white dark:bg-[#131313] p-2">
             {/* About Section */}
             <section
               id="about"
@@ -64,15 +64,6 @@ const DashboardLayout = () => {
               <AboutMe />
             </section>
 
-            {/* Projects Section */}
-            <section
-              id="projects"
-              ref={(el) => (sectionsRef.current.projects = el)}
-              className="min-h-[100vh] py-8"
-            >
-              <Projects />
-            </section>
-
             {/* Resume Section */}
             <section
               id="resume"
@@ -80,6 +71,15 @@ const DashboardLayout = () => {
               className="min-h-[100vh] py-8"
             >
               <Resume />
+            </section>
+
+            {/* Projects Section */}
+            <section
+              id="projects"
+              ref={(el) => (sectionsRef.current.projects = el)}
+              className="min-h-[100vh] py-8"
+            >
+              <Projects />
             </section>
 
             {/* Contact Section */}
