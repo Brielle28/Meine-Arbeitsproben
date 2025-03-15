@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 import AboutMe from "./AboutMe/AboutMe";
 import Contact from "./Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
-import Resume from "./Resume";
+import Resume from "./Resume/Resume";
 import Projects from "./Projects";
 import ParticlesComponent from "../Component/Particles/ParticlesComponent";
 import "../App.css";
