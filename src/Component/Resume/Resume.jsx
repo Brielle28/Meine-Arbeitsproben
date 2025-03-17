@@ -2,6 +2,8 @@ import { CgLoadbarDoc } from "react-icons/cg";
 import { FaDownload } from "react-icons/fa";
 import EmploymentHistory from "./EmploymentHistory";
 import CredentialsDisplay from "./CredentialsDisplay";
+import TechStackCard from "./TechStackCard";
+import ToolStackCard from "./ToolStackCard.jsx";
 const Resume = () => {
   return (
     <>
@@ -20,6 +22,8 @@ const Resume = () => {
         </div>
         <EmploymentHistory/>
         <CredentialsDisplay/>
+        <TechStackCard/>
+        <ToolStackCard/>
       </div>
     </>
   );

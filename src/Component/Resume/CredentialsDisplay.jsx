@@ -31,7 +31,7 @@ const CredentialsDisplay = () => {
   const education = [
     {
       id: 1,
-      yearRange: "2019 - 2023",
+      yearRange: "2018 - 2022",
       degree: "Bachelor of Science",
       field: "Political Science",
       description:
