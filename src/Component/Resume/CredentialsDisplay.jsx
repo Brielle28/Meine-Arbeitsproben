@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaGreaterThan } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 const CredentialsDisplay = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
@@ -13,7 +14,7 @@ const CredentialsDisplay = () => {
       organization: "Global Mentorship Initiative",
       description:
         "Recognized for completing the GMI Career Readiness Mentorship Program.",
-      certificateImage: "/mnt/data/Screenshot_2025-03-18_010355.png", // Replace with actual image path in your application
+      certificateImage: "/gmi1.png", // Replace with actual image path in your application
     },
     {
       id: 1,
@@ -22,7 +23,7 @@ const CredentialsDisplay = () => {
       organization: "AfricaPlan Foundation & Hordanso LLC",
       description:
         "Successfully completed the Hackathon Africa 2.0 Bootcamp and certified with skills in Web Development",
-      certificateImage: "/mnt/data/IMG_4247.jpeg", // Replace with actual image path in your application
+      certificateImage: "/webdev.jpeg", // Replace with actual image path in your application
     },
 
     // Add more certifications here as needed
@@ -36,7 +37,7 @@ const CredentialsDisplay = () => {
       field: "Political Science",
       description:
         "Bachelor's degree in Political Science with Second Class Honours (Upper Division) from the University of Nigeria.",
-      certificateImage: "/mnt/data/IMG_4246.jpeg", // Replace with actual image path in your application
+      certificateImage: "/Bsc.jpeg", // Replace with actual image path in your application
     },
 
     // Add more education entries here as needed
@@ -75,7 +76,9 @@ const CredentialsDisplay = () => {
                 <path d="M4 10h16" />
               </svg>
             </span>
-            <span className="font-medium text-gray-700 dark:text-white">CERTIFICATIONS</span>
+            <span className="font-medium text-gray-700 dark:text-white">
+              CERTIFICATIONS
+            </span>
           </div>
         </div>
 
@@ -93,7 +96,9 @@ const CredentialsDisplay = () => {
             <button className="shadow-2xl px-2 bg-[#FAFAFA] dark:bg-[#1B1B1B] dark:border-gray-600 border-[1px] rounded-[5px] border-gray-300 mb-2">
               <span className="text-gray-400 text-sm">{cert.year}</span>
             </button>
-            <h3 className="text-[14px] text-black dark:text-white font-bold mb-1">{cert.title}</h3>
+            <h3 className="text-[14px] text-black dark:text-white font-bold mb-1">
+              {cert.title}
+            </h3>
             <p className="text-gray-400 mb-2 text-[14px]">
               {cert.organization}
             </p>
@@ -134,7 +139,9 @@ const CredentialsDisplay = () => {
                 <rect width="12" height="14" x="10" y="5" rx="2" />
               </svg>
             </span>
-            <span className="font-medium text-gray-700 dark:text-white">EDUCATION</span>
+            <span className="font-medium text-gray-700 dark:text-white">
+              EDUCATION
+            </span>
           </div>
         </div>
 
@@ -152,7 +159,9 @@ const CredentialsDisplay = () => {
             <button className="shadow-2xl px-2 bg-[#FAFAFA] dark:bg-[#1B1B1B] dark:border-gray-600 border-[1px] rounded-[5px] border-gray-300 mb-2">
               <span className="text-gray-500 text-sm">{edu.yearRange}</span>
             </button>
-            <h3 className="text-[14px] text-black dark:text-white font-bold mb-1">{edu.degree}</h3>
+            <h3 className="text-[14px] text-black dark:text-white font-bold mb-1">
+              {edu.degree}
+            </h3>
             <p className="text-gray-400 mb-2 text-[14px]">{edu.field}</p>
             <p className="text-gray-500 mb-3 text-[14px] font-medium dark:text-white">
               {edu.description}
@@ -180,18 +189,20 @@ const CredentialsDisplay = () => {
               </h2>
               <button
                 onClick={closeModal}
-                className="text-gray-500 hover:text-gray-700 p-2"
+                className="text-black hover:text-red-500 p-2 sticky right-0"
               >
-                ✕
+                <IoClose  className="text-[35px]"/>
               </button>
             </div>
             <div className="mb-4">
-              <p className="text-gray-600 mb-2 text-lg">
-                {modalContent.organization || modalContent.field}
-              </p>
-              <p className="text-gray-500 mb-4">
-                {modalContent.year || modalContent.yearRange}
-              </p>
+              <div className="flex items-center gap-3 mb-3">
+                <p className="text-gray-600 font-bold text-lg">
+                  {modalContent.organization || modalContent.field}
+                </p>
+                <p className="text-gray-500">
+                  {modalContent.year || modalContent.yearRange}
+                </p>
+              </div>
               <p className="text-gray-700 mb-4">{modalContent.description}</p>
             </div>
             <div className="border rounded-lg overflow-hidden">
