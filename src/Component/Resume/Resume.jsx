@@ -4,6 +4,7 @@ import EmploymentHistory from "./EmploymentHistory";
 import CredentialsDisplay from "./CredentialsDisplay";
 import TechStackCard from "./TechStackCard";
 import ToolStackCard from "./ToolStackCard.jsx";
+import SoftSkillsDisplay from "./SoftSkillsDisplay.jsx";
 const Resume = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const Resume = () => {
         <CredentialsDisplay/>
         <TechStackCard/>
         <ToolStackCard/>
+        <SoftSkillsDisplay/>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Sidebar from "./Sidebar";
 import AboutMe from "./AboutMe/AboutMe";
-import Contact from "./Contact";
+import Contact from "../Component/Contact/Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import Resume from "./Resume/Resume";
 import Projects from "./Projects";
@@ -86,7 +86,7 @@ const DashboardLayout = () => {
             <section
               id="contact"
               ref={(el) => (sectionsRef.current.contact = el)}
-              className="min-h-[100vh] py-8"
+              className="min-h-[100vh] w-full"
             >
               <Contact />
             </section>

@@ -20,10 +20,6 @@ const TechStackCard = () => {
     { id: 2, name: "CSS", icon: <FaCss3Alt className="text-blue-500 size-full" />, proficiency: 90 },
     { id: 8, name: "Redux Toolkit", icon: <SiRedux className="text-purple-500 size-full" />, proficiency: 80 },
     { id: 9, name: "Axios & Fetch API", icon: <SiAxios className="text-blue-500 size-full" />, proficiency: 85 },
-    // { id: 10, name: "Firebase", icon: <SiFirebase className="text-yellow-400 size-full" />, proficiency: 70 },
-    // { id: 11, name: "NPM & Webpack", icon: <SiNpm className="text-red-500 size-full" />, proficiency: 80 },
-    // { id: 12, name: "Cypress", icon: <SiCypress className="text-green-600 size-full" />, proficiency: 75 },
-    // { id: 13, name: "Git/GitHub/GitBash", icon: <FaGitAlt className="text-red-500 size-full" />, proficiency: 90 },
   ];
 
   return (
