@@ -8,7 +8,7 @@ import DownloadResumeButton from "./DownloadResumeButton.jsx";
 const Resume = () => {
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center md:mt-4">
         <div className="w-full flex items-center justify-between ">
           <button className="flex items-center justify-center gap-1 border-[1px] border-gray-300  rounded-[30px] text-gray-500 bg-transparent px-3 py-2">
             {" "}
