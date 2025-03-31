@@ -1,0 +1,99 @@
+/* src/components/GitHubContributionCalendar.css */
+.github-contribution-section {
+  max-width: 450px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 0px;
+  margin-bottom: 24px;
+  margin-top: 20px;
+}
+
+.contribution-calendar {
+  width: 100%;
+}
+
+.calendar-header {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-contributions {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.calendar-months {
+    margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px; /* Reduced for better alignment */
+  padding-left: 20px; /* Adjusted for better positioning */
+}
+
+.calendar-month {
+  font-size: 10px; /* Reduced size to fit */
+  color: #666;
+  flex: 1; /* Distribute evenly */
+  text-align: center;
+}
+
+.calendar-body {
+  display: flex;
+}
+
+.calendar-days {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px; /* Reduced to align with squares */
+}
+
+.calendar-day-name {
+  height: 12px; /* Adjust height */
+  line-height: 12px;
+  margin-bottom: 2px; /* Reduced spacing */
+  font-size: 10px; /* Smaller text to fit better */
+  color: #666;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+}
+
+.calendar-week {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2px;
+}
+
+.calendar-day {
+  width: 6px;
+  height: 6px;
+  margin-bottom: 2px;
+  border-radius: 1px;
+  background-color: #ebedf0;
+}
+
+.calendar-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contribution-scale {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.scale-square {
+  width: 10px;
+  height: 10px;
+  margin: 0 2px;
+  border-radius: 2px;
+}
