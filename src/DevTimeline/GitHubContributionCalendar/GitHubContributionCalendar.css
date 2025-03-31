@@ -26,17 +26,17 @@
 }
 
 .calendar-months {
-    margin-top: 0px;
+  margin-top: 0px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4px; /* Reduced for better alignment */
-  padding-left: 20px; /* Adjusted for better positioning */
+  margin-bottom: 4px;
+  padding-left: 20px;
 }
 
 .calendar-month {
-  font-size: 10px; /* Reduced size to fit */
+  font-size: 10px;
   color: #666;
-  flex: 1; /* Distribute evenly */
+  flex: 1;
   text-align: center;
 }
 
@@ -47,14 +47,14 @@
 .calendar-days {
   display: flex;
   flex-direction: column;
-  margin-right: 5px; /* Reduced to align with squares */
+  margin-right: 5px;
 }
 
 .calendar-day-name {
-  height: 12px; /* Adjust height */
+  height: 12px;
   line-height: 12px;
-  margin-bottom: 2px; /* Reduced spacing */
-  font-size: 10px; /* Smaller text to fit better */
+  margin-bottom: 2px;
+  font-size: 10px;
   color: #666;
 }
 

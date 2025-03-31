@@ -1,7 +1,7 @@
 import GitHubContributionCalendar from "../GitHubContributionCalendar/GitHubContributionCalendar";
 import GitHubLanguageStats from "../GitHubLanguageStats/GitHubLanguageStats";
 import RecentGitHubActivity from "../RecentGitHubActivity/RecentGitHubActivity";
-import WakaTimeDashboard from "../WakaTimeDashboard/WakaTimeDashboard";
+// import WakaTimeDashboard from "../WakaTimeDashboard/WakaTimeDashboard";
 
 const DevDashboardDrawer = () => {
   return (
@@ -13,7 +13,7 @@ const DevDashboardDrawer = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="menu bg-base-200 dark:bg-[#1C1C1C] dark:text-white text-base-content h-full w-[500px] p-4 overflow-y-scroll">
+        <div className="menu bg-white dark:bg-[#1C1C1C] dark:text-white text-base-content h-full w-[500px] p-4 overflow-y-scroll">
           <div className="dev-dashboard">
             <div className="dashboard-grid">
               <div className="dashboard-column ">
