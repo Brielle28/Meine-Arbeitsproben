@@ -7,7 +7,7 @@ const ProfilePicture = () => {
   // Glitch effect state
   const [isGlitching, setIsGlitching] = useState(false);
 
-  const glitchInterval = 5000; // Trigger glitch every 3 seconds
+  const glitchInterval = 5000; // Trigger glitch every 5 seconds
   const glitchDuration = 200; // Glitch effect lasts for 200ms
 
   // Glitch effect interval
@@ -22,10 +22,10 @@ const ProfilePicture = () => {
 
   return (
     <div className="mt-20 w-full md:mt-0 lg:mt-4 flex flex-col items-center justify-center md:h-[500px] lg:h-[80vh] bg-white dark:bg-[#131313] md:w-[75%] lg:w-[30%] text-black rounded-b-[40px] rounded-tl-[40px] shadow-2xl p-4">
-      <div className="relative mt-3 w-[280px] h-[280px] overflow-hidden rounded-b-[40px] rounded-tl-[40px]">
+      <div className="relative mt-3 w-[280px] h-[280px] z-0 overflow-hidden rounded-b-[40px] rounded-tl-[40px]">
         {/* Profile Image */}
         <div
-          className="absolute inset-0 bg-[url('/me.jpg')] bg-cover bg-no-repeat"
+          className="absolute inset-0 bg-[url('/me.jpg')] bg-cover bg-no-repeat w-full h-full object-cover"
           aria-label="Profile Picture"
         ></div>
 
@@ -118,7 +118,8 @@ const ProfilePicture = () => {
       </div>
 
       {/* CSS Animations */}
-      <style jsx>{`
+      <style jsx>
+        {`
         @keyframes slice-anim-1 {
           0%,
           100% {
@@ -158,7 +159,8 @@ const ProfilePicture = () => {
             opacity: 0;
           }
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 };
