@@ -63,7 +63,7 @@ const RecentGitHubActivity = () => {
   const groupedActivities = groupActivitiesByMonth();
   
   return (
-    <div className="max-w-md mx-auto px-6 py-4 bg-transparent dark:bg-transparent rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-y-auto h-80 mt-10">
+    <div className="max-w-[300px] md:max-w-md mx-auto px-6 py-4 bg-transparent dark:bg-transparent rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-y-auto h-80 mt-10">
       <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Recent GitHub Activity</h2>
       {Object.entries(groupedActivities).map(([monthYear, monthActivities]) => (
         <div key={monthYear} className="mb-6">

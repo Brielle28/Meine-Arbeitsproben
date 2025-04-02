@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Sidebar from "./Sidebar";
+import Sidebar from "../Component/Sidebar/Sidebar";
 import AboutMe from "./AboutMe/AboutMe";
 import Contact from "../Component/Contact/Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";

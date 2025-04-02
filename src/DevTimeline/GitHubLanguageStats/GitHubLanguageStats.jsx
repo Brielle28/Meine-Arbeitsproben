@@ -35,27 +35,27 @@ const GitHubLanguageStats = () => {
     );
 
   return (
-    <div className="max-w-[450px] mx-auto p-4 bg-white dark:bg-black rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
-      <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+    <div className="max-w-[300px] md:max-w-[450px] mx-auto p-4 bg-white dark:bg-black rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
+      <h2 className="md:text-xl text-sm font-semibold text-gray-900 dark:text-gray-100">
         I Mostly Code in
       </h2>
-      <div className="space-y-4 mt-4">
+      <div className="space-y-2 md:space-y-4 mt-4">
         {languageStats.slice(0, 5).map((lang) => (
           <div key={lang.name} className="flex items-center justify-between ">
             <div className="text-pink-700 dark:text-gray-200 font-medium">
               {lang.name}
             </div>
-            <div className="flex items-center gap-5">
-              <div className="text-gray-600 dark:text-gray-400 text-sm">
+            <div className="flex items-center justify-center md:gap-5 gap-2">
+              <div className="text-gray-600 dark:text-gray-400 text-[12px] md:text-sm">
                 {lang.count} repos
               </div>
-              <div className="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+              <div className="w-15 md:w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-pink-500"
                   style={{ width: `${lang.percentage}%` }}
                 ></div>
               </div>
-              <div className="text-gray-700 dark:text-gray-300 text-sm">
+              <div className="text-gray-700 dark:text-gray-300 text-[12px] md:text-sm">
                 {lang.percentage} %
               </div>
             </div>
