@@ -4,7 +4,7 @@ import AboutMe from "./AboutMe/AboutMe";
 import Contact from "../Component/Contact/Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import Resume from "./Resume/Resume";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import ParticlesComponent from "../Component/Particles/ParticlesComponent";
 import "../App.css";
 import NavBar from "./NavBar";

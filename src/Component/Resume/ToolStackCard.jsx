@@ -7,12 +7,16 @@ import {
   SiCypress,
   SiGooglechrome,
 } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
 const ToolStackCard = () => {
   const toolStacks = [
     { id: 1, name: "VS Code", icon: <DiVisualstudio />, proficiency: 95 },
+    { id: 9, name: "Visual studio", icon: <DiVisualstudio />, proficiency: 55 },
     { id: 2, name: "GitHub", icon: <SiGithub />, proficiency: 95 },
+    { id: 10, name: "MS SQL", icon: <FaDatabase />, proficiency: 50 },
     { id: 3, name: "NPM", icon: <SiNpm />, proficiency: 80 },
+    { id: 11, name: "Nuget Package Manager", icon: <SiNpm />, proficiency: 50 },
     { id: 4, name: "Webpack", icon: <SiWebpack />, proficiency: 75 },
     { id: 5, name: "Firebase", icon: <SiFirebase />, proficiency: 50 },
     { id: 6, name: "Cypress", icon: <SiCypress />, proficiency: 40 },
@@ -22,7 +26,6 @@ const ToolStackCard = () => {
       icon: <SiGooglechrome />,
       proficiency: 85,
     },
-    { id: 9, name: "Visual studio", icon: <DiVisualstudio />, proficiency: 55 },
     { id: 8, name: "Figma", icon: <BiLogoFigma />, proficiency: 95 },
   ];
 

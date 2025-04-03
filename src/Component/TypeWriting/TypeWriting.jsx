@@ -7,7 +7,7 @@ const TypeWriting = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  const texts = ["SOFTWARE DEVELOPER", "FRONT-END DEVELOPER"];
+  const texts = ["SOFTWARE DEVELOPER", "FRONT-END DEVELOPER", ".NET DEVELOPER"];
   const delay = 150;
   const pauseDuration = 1000;
 

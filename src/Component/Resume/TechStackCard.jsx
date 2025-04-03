@@ -1,25 +1,82 @@
 import { TbBrandCSharp } from "react-icons/tb";
-import { FaHtml5, FaCss3Alt, FaReact, FaVuejs,  } from "react-icons/fa";
-
-import { SiTailwindcss, SiTypescript, SiRedux, SiJavascript, SiAxios } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaReact, FaVuejs } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiRedux,
+  SiJavascript,
+  SiAxios,
+} from "react-icons/si";
 import { CgGym } from "react-icons/cg";
 const TechStackCard = () => {
- const techStacks = [
+  const techStacks = [
+    {
+      id: 4,
+      name: "JavaScript",
+      icon: <SiJavascript className="text-yellow-500 size-full" />,
+      proficiency: 85,
+    },
+    {
+      id: 5,
+      name: "TypeScript",
+      icon: <SiTypescript className="text-blue-600 size-full" />,
+      proficiency: 80,
+    },
     {
       id: 10,
-      name: "C++",
+      name: "C#",
       icon: <TbBrandCSharp className="text-pink-500 size-full" />,
       proficiency: 85,
     },
-    { id: 4, name: "JavaScript", icon: <SiJavascript className="text-yellow-500 size-full" />, proficiency: 85 },
-    { id: 5, name: "TypeScript", icon: <SiTypescript className="text-blue-600 size-full" />, proficiency: 80 },
-    { id: 6, name: "React", icon: <FaReact className="text-blue-400 size-full" />, proficiency: 90 },
-    { id: 7, name: "Vue", icon: <FaVuejs className="text-green-500 size-full" />, proficiency: 75 },
-    { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500 size-full" />, proficiency: 90 },
-    { id: 1, name: "HTML", icon: <FaHtml5 className="text-orange-500 size-full" />, proficiency: 95 },
-    { id: 2, name: "CSS", icon: <FaCss3Alt className="text-blue-500 size-full" />, proficiency: 90 },
-    { id: 8, name: "Redux Toolkit", icon: <SiRedux className="text-purple-500 size-full" />, proficiency: 80 },
-    { id: 9, name: "Axios & Fetch API", icon: <SiAxios className="text-blue-500 size-full" />, proficiency: 85 },
+    {
+      id: 11,
+      name: "ASP.NET",
+      icon: <FaCode className="text-blue-600 size-full" />,
+      proficiency: 50,
+    },
+    {
+      id: 6,
+      name: "React",
+      icon: <FaReact className="text-blue-400 size-full" />,
+      proficiency: 90,
+    },
+    {
+      id: 7,
+      name: "Vue",
+      icon: <FaVuejs className="text-green-500 size-full" />,
+      proficiency: 75,
+    },
+    {
+      id: 3,
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="text-cyan-500 size-full" />,
+      proficiency: 90,
+    },
+    {
+      id: 1,
+      name: "HTML",
+      icon: <FaHtml5 className="text-orange-500 size-full" />,
+      proficiency: 95,
+    },
+    {
+      id: 2,
+      name: "CSS",
+      icon: <FaCss3Alt className="text-blue-500 size-full" />,
+      proficiency: 90,
+    },
+    {
+      id: 8,
+      name: "Redux Toolkit",
+      icon: <SiRedux className="text-purple-500 size-full" />,
+      proficiency: 80,
+    },
+    {
+      id: 9,
+      name: "Axios & Fetch API",
+      icon: <SiAxios className="text-blue-500 size-full" />,
+      proficiency: 85,
+    },
   ];
 
   return (
@@ -46,7 +103,9 @@ const TechStackCard = () => {
                 <div className="size-12 flex items-center justify-center rounded-md text-xl">
                   {tech.icon}
                 </div>
-                <span className="font-semibold text-gray-500 dark:text-white text-[20px]">{tech.name}</span>
+                <span className="font-semibold text-gray-500 dark:text-white text-[20px]">
+                  {tech.name}
+                </span>
               </div>
               <span className="absolute right-4 top-4 border-[1px] border-gray-300 dark:border-gray-600 dark:text-white px-2 py-1 rounded-full text-xs text-gray-600">
                 {tech.proficiency}%
