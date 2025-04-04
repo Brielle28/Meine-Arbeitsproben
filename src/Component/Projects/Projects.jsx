@@ -51,12 +51,14 @@ export default function Projects() {
             key={p.id}
             className="relative p-3  bg-transparent border-[1px] border-gray-300 shadow-lg rounded-[20px]"
           >
-            <img
-              src={p.image}
-              alt={p.title}
-              className="w-full h-32 rounded-[20px] object-cover rounded-t-lg cursor-pointer"
-              onClick={() => setModal(p)}
-            />
+            <a href={p.live} className="w-full">
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-full h-32 rounded-[20px] object-cover rounded-t-lg cursor-pointer"
+                // onClick={() => setModal(p)}
+              />
+            </a>
             <div className="p-4">
               <h3
                 className="text-lg font-semibold cursor-pointer hover:underline"
@@ -80,6 +82,13 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      <a
+        href="https://github.com/Brielle28?tab=repositories"
+        className="w-full text-center bg-pink-500 text-white font-semibold mt-5 md:mt-7 rounded-[20px] py-1 md:py-3"
+      >
+        {" "}
+        View All Projects
+      </a>
     </div>
   );
 }

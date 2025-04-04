@@ -1,29 +1,81 @@
-
-//add preloader for network delay 
-
 export const projects = [
+  {
+    id: 2,
+    title: "FreshFinds: E-commerce website",
+    live: "https://fresh-finds-eight.vercel.app/",
+    category: "React",
+    image: "/FF.png",
+    video: "/soldier-animation.mp4",
+    createdBy: "Brielle28",
+    date: "23/12/2024",
+    code: "https://github.com/Brielle28/FreshFinds",
+    description:
+      "Fresh Finds is a responsive e-commerce application designed to make grocery shopping easy and enjoyable. The platform organizes items into categories like Fruits and Vegetables, Dairy Products, Meat and Seafood, and more. With a user-friendly interface and functionalities like liking products, adding them to a cart, and viewing product details, Fresh Finds aims to enhance the online grocery shopping experience. its features includes Splash Screen: An animated introduction for brand awareness. Dynamic Categories: Organized sections for a better browsing experience. Search functionality : a search input secton to help user quickly find an item in the website. Add to Cart & Liking Products: Interactive buttons to manage your shopping list. Check Out Process and Payment: from viewing your items added to cart to the checkouting process and filling a payment form. Item Details: Detailed view of each product with dynamic pricing and descriptions. Responsive Design: Optimized for devices of all sizes. Reusable Components: Modular components for scalability.",
+  },
+  {
+    id: 3,
+    title: "Task Management Application",
+    live: "https://task-management-sigma-sage.vercel.app/",
+    category: "React",
+    image: "/TMA.png",
+    video: "/soldier-animation.mp4",
+    createdBy: "Brielle28",
+    date: "29/09/2024",
+    code: "https://github.com/Brielle28/Task-Management",
+    description:
+      "The Task Manager App is a simple web application built with React and styled with Tailwind CSS, designed to help users manage tasks. It offers features like adding, editing, and deleting tasks, and a calendar view to visually track tasks by date. Tasks are stored in local storage, allowing persistence across sessions without the need for backend. Key features includes:Task Creation: Easily add tasks with a title, description, start and end date.  Task Editing: Edit existing tasks from the list. Task Deletion: Remove tasks that are no longer needed. Calendar Integration: View tasks on specific dates with dot indicators. Local Storage: All tasks are stored and retrieved from the browser’s local storage. Search: Quickly find tasks by title using a search bar.",
+  },
   {
     id: 1,
     title: "SwiftQR: QR GENERATOR",
+    live: "",
     category: "React",
-    image: "https://github.com/user-attachments/assets/bd038156-3360-4f6c-8f8b-c5045c8c9c45",
+    image:
+      "https://github.com/user-attachments/assets/bd038156-3360-4f6c-8f8b-c5045c8c9c45",
     video: "/robot-animation.mp4",
     createdBy: "Brielle",
     date: "20/03/2025",
     code: "https://github.com/Brielle28/SwiftQR",
     description:
-      "SwiftQR is a web-based QR code generator built to simplify the process of creating QR codes for different types of content. Users can enter any text, URL, or specific data to generate a high-quality QR code instantly. Additionally, the application allows users to customize their QR codes by changing colors, and once generated, they can download the QR codes as images for easy sharing. One of the standout features of SwiftQR is its built-in history tracking, which ensures that users can access previously generated QR codes without needing to regenerate them. This feature is especially useful for businesses, marketers, and individuals who frequently create QR codes for promotions, product packaging, or personal use. Whether you're a developer, entrepreneur, or casual user, SwiftQR provides a smooth and reliable QR code creation experience, eliminating the hassle of manually searching for QR code generators online."
+      "SwiftQR is a web-based QR code generator built to simplify the process of creating QR codes for different types of content. Users can enter any text, URL, or specific data to generate a high-quality QR code instantly. Additionally, the application allows users to customize their QR codes by changing colors, and once generated, they can download the QR codes as images for easy sharing. One of the standout features of SwiftQR is its built-in history tracking, which ensures that users can access previously generated QR codes without needing to regenerate them. This feature is especially useful for businesses, marketers, and individuals who frequently create QR codes for promotions, product packaging, or personal use. Whether you're a developer, entrepreneur, or casual user, SwiftQR provides a smooth and reliable QR code creation experience, eliminating the hassle of manually searching for QR code generators online.",
   },
   {
-    id: 2,
-    title: "Soldier Character for a Game",
-    category: "3D Models",
-    image: "/soldier.jpg",
+    id: 4,
+    title: "Web Dictionary Application",
+    category: "TypeScript",
+    live: "https://webdictionary-ten.vercel.app/",
+    image: "/WDA.png",
     video: "/soldier-animation.mp4",
-    createdBy: "Ryan Adlard",
-    date: "07/08/2019",
-    code: "https://github.com/Brielle28",
+    createdBy: "Brielle28",
+    date: "29/07/2024",
+    code: "https://github.com/Brielle28/webdictionary",
     description:
-      "A 3D soldier character designed for an action-packed game, focusing on realism and animation.",
+      "WebDictionary is a web-based dictionary application that provides users with an intuitive and efficient way to search for word definitions, pronunciation, synonyms, and example sentences; built with React, this application leverages the power of external APIs to fetch accurate and comprehensive language data suitable for students and writers, and includes features such as Word Search (enter a word to fetch its definitions and details), Pronunciation (provides audio pronunciation if available), Meanings and Examples (displays different meanings of the word along with examples), Synonyms (shows synonyms for each meaning if available), and Source Link (direct link to the source of the word definition).",
+  },
+  {
+    id: 5,
+    title: "Student Registry Application",
+    live: "https://student-registry-6np3cwcj0-brielle28s-projects.vercel.app/",
+    category: "Vue",
+    image: "/SRA.png",
+    video: "/soldier-animation.mp4",
+    createdBy: "Brielle28",
+    date: "24/01/2025",
+    code: "https://github.com/Brielle28/Student-Registry/",
+    description:
+      "This is a Vue.js-based application for registering students and managing their records, offering functionality for adding, editing, deleting, and searching student records through a simple user interface with reactive elements for a smooth user experience, and includes features such as adding new student records with fields for name, age, and email, editing student details directly within the record table, deleting records with confirmation for undoing the deletion, search functionality to filter records by name, age, or email, and a responsive design for a better experience on different screen sizes.",
+  },
+  {
+    id: 6,
+    title: "NoteApp Application",
+    live: "https://notes-app-opal-five.vercel.app/",
+    category: "React",
+    image: "/NA.png",
+    video: "/soldier-animation.mp4",
+    createdBy: "Brielle28",
+    date: "06/01/2025",
+    code: "https://github.com/Brielle28/NotesApp",
+    description:
+      "NotesApp is a lightweight and intuitive note-taking web application built with React that features color-coded categorization, inline editing, and persistent storage using localStorage, offering a responsive and minimalistic interface ideal for quick note management across all devices, and includes features such as creating notes with a choice of three customizable color themes for easy categorization, inline editing of note titles and content in real time, persistent storage that automatically saves notes to localStorage to prevent data loss on reload, deleting unwanted notes, automatic date and time tracking for each note, a responsive design optimized for both mobile and desktop devices, an interactive user interface with smooth transitions and hover effects, and click-to-edit functionality for easily switching between viewing and editing modes.",
   },
 ];
