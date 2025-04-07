@@ -1,3 +1,6 @@
+
+//add preloader for network delay 
+
 export const projects = [
   {
     id: 1,

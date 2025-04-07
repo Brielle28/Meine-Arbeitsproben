@@ -4,7 +4,7 @@ import AboutMe from "./AboutMe/AboutMe";
 import Contact from "../Component/Contact/Contact";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import Resume from "./Resume/Resume";
-import Projects from "./Projects/Projects";
+import Projects from "../Component/Projects/Projects";
 import ParticlesComponent from "../Component/Particles/ParticlesComponent";
 import "../App.css";
 import NavBar from "./NavBar";
@@ -107,7 +107,7 @@ const DashboardLayout = () => {
               <section
                 id="about"
                 ref={(el) => (sectionsRef.current.about = el)}
-                className="min-h-[100vh] py-8"
+                className="min-h-[100vh]"
               >
                 <AboutMe />
               </section>
@@ -116,7 +116,7 @@ const DashboardLayout = () => {
               <section
                 id="resume"
                 ref={(el) => (sectionsRef.current.resume = el)}
-                className="min-h-[100vh] py-8"
+                className="min-h-[100vh]"
               >
                 <Resume />
               </section>
@@ -125,7 +125,7 @@ const DashboardLayout = () => {
               <section
                 id="projects"
                 ref={(el) => (sectionsRef.current.projects = el)}
-                className="min-h-[100vh] py-8"
+                className="min-h-[100vh]"
               >
                 <Projects />
               </section>

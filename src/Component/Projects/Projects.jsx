@@ -1,7 +1,7 @@
 import { FaToolbox } from "react-icons/fa";
 import { useState } from "react";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { projects } from "./projects";
+// import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { projects } from "./pros";
 import ProjectDetail from "./ProjectDetail";
 import { IoMdArrowUp } from "react-icons/io";
 

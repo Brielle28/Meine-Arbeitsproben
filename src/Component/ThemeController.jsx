@@ -27,11 +27,11 @@ const ThemeController = () => {
   };
 
   // Function to reset to system preference
-  // const useSystemPreference = () => {
-  //   localStorage.removeItem('theme');
-  //   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  //   setIsDarkMode(systemPrefersDark);
-  // };
+  const useSystemPreference = () => {
+    localStorage.removeItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setIsDarkMode(systemPrefersDark);
+  };
 
   return (
     <>

@@ -1,13 +1,15 @@
-import './App.css'
-import AppRouter from './AppRouter'
+import "./App.css";
+import AppRouter from "./AppRouter";
+import Preloader from "./Component/loader/Preloader";
 
 function App() {
-
   return (
     <>
-    <AppRouter/>
+      <Preloader>
+        <AppRouter />
+      </Preloader>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

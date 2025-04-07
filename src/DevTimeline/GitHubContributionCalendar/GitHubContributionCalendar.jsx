@@ -65,49 +65,50 @@ const GitHubContributionCalendar = () => {
     return (
       <div className="contribution-calendar ">
         <div className="calendar-header">
-          <span className="total-contributions">
+          <span className="total-contributions text-black font-semibold dark:text-pink-500">
             {contributionData.totalContributions} contributions in{" "}
             {new Date().getFullYear()}
           </span>
         </div>
-
-        <div className="calendar-months">
-          {months.map((month) => (
-            <div key={month} className="calendar-month">
-              {month}
-            </div>
-          ))}
-        </div>
-
-        <div className="calendar-body">
-          <div className="calendar-days">
-            {days.map(
-              (day, index) =>
-                index % 2 === 0 && (
-                  <div key={day} className="calendar-day-name">
-                    {day}
-                  </div>
-                )
-            )}
-          </div>
-
-          <div className="calendar-grid">
-            {contributionData.weeks.map((week, weekIndex) => (
-              <div key={weekIndex} className="calendar-week">
-                {week.contributionDays.map((day) => (
-                  <div
-                    key={day.date}
-                    className="calendar-day"
-                    style={{
-                      backgroundColor: getPinkColor(day.contributionCount),
-                    }}
-                    title={`${format(new Date(day.date), "MMM d, yyyy")}: ${
-                      day.contributionCount
-                    } contributions`}
-                  />
-                ))}
+        <div className="block md:hidden overflow-x-auto">
+          <div className="calendar-months">
+            {months.map((month) => (
+              <div key={month} className="calendar-month">
+                {month}
               </div>
             ))}
+          </div>
+
+          <div className="calendar-body">
+            <div className="calendar-days">
+              {days.map(
+                (day, index) =>
+                  index % 2 === 0 && (
+                    <div key={day} className="calendar-day-name">
+                      {day}
+                    </div>
+                  )
+              )}
+            </div>
+
+            <div className="calendar-grid">
+              {contributionData.weeks.map((week, weekIndex) => (
+                <div key={weekIndex} className="calendar-week">
+                  {week.contributionDays.map((day) => (
+                    <div
+                      key={day.date}
+                      className="calendar-day"
+                      style={{
+                        backgroundColor: getPinkColor(day.contributionCount),
+                      }}
+                      title={`${format(new Date(day.date), "MMM d, yyyy")}: ${
+                        day.contributionCount
+                      } contributions`}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -143,7 +144,9 @@ const GitHubContributionCalendar = () => {
 
   return (
     <div className="github-contribution-section">
-      <h2>GitHub Contributions</h2>
+      <h2 className="dark:text-white text-black font-semibold">
+        GitHub Contributions
+      </h2>
       {renderCalendar()}
     </div>
   );
