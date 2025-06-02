@@ -258,7 +258,7 @@ const DashboardLayout = () => {
             </main>
           ) : (
             // Small & large screens: no scrolling, show only active tab
-            <main className="w-full md:w-[75%] lg:w-[53%] h-[80vh] mt-4 rounded-b-[40px] rounded-tr-[40px] shadow-2xl bg-white dark:bg-[#131313] p-2 overflow-y-auto lg:overflow-hidden">
+            <main className="w-full md:w-[75%] lg:w-[53%] h-[80vh] mt-4 rounded-b-[40px] rounded-tr-[40px] shadow-2xl bg-white dark:bg-[#131313] p-2 overflow-y-auto">
               {activeTab === "about" && <AboutMe />}
               {activeTab === "resume" && <Resume />}
               {activeTab === "projects" && <Projects />}

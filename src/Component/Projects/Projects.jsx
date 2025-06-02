@@ -51,14 +51,14 @@ export default function Projects() {
             key={p.id}
             className="relative p-3  bg-transparent border-[1px] border-gray-300 shadow-lg rounded-[20px]"
           >
-            <a href={p.live} className="w-full">
+            {/* <a href={p.live} className="w-full"> */}
               <img
                 src={p.image}
                 alt={p.title}
                 className="w-full h-32 rounded-[20px] object-cover rounded-t-lg cursor-pointer"
                 // onClick={() => setModal(p)}
               />
-            </a>
+            {/* </a> */}
             <div className="p-4">
               <h3
                 className="text-lg font-semibold cursor-pointer hover:underline"

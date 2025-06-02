@@ -1,9 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Brielle | Frontend Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Brielle - Frontend Developer skilled in React, JavaScript, and modern web technologies. Showcasing projects, skills, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, React Developer, JavaScript, Web Developer, Brielle Portfolio, Web Projects"
+    />
+    <meta name="author" content="Brielle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      property="og:title"
+      content="Brielle | Frontend Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Brielle - skilled React developer showcasing projects and skills."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brielle-tau.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://brielle-tau.vercel.app/icon.png"
+    />
+
     <title>Clara</title>
   </head>
   <body>
@@ -12,15 +37,14 @@
     <script>
       // Check for dark mode preference early to prevent flashing
       if (
-        localStorage.theme === 'dark' || 
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
-        document.documentElement.classList.add('dark');
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove("dark");
       }
     </script>
   </body>
 </html>
-
-
