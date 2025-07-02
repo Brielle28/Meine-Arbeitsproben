@@ -13,7 +13,14 @@ export const projects = [
       "Responsive design",
       "Reusable components",
     ],
-    techStack: ["React", "Tailwind CSS", "Daisy ui","React Router Dom","Custom css Animation", "LocalStorage"],
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Daisy ui",
+      "React Router Dom",
+      "Custom css Animation",
+      "LocalStorage",
+    ],
     live: "https://fresh-finds-eight.vercel.app/",
     code: "https://github.com/Brielle28/FreshFinds",
     category: "React",
@@ -25,7 +32,49 @@ export const projects = [
     duration: "Built in 2 weeks – Dec 2024",
     status: "Completed",
     description:
-    "Fresh Finds is a responsive e-commerce application for groceries. It features category browsing, liking and cart functionality, dynamic product detail views, and a seamless checkout experience, all wrapped in a responsive, user-friendly design."
+      "Fresh Finds is a responsive e-commerce application for groceries. It features category browsing, liking and cart functionality, dynamic product detail views, and a seamless checkout experience, all wrapped in a responsive, user-friendly design.",
+  },
+  {
+    id: 11,
+    title: "StockHub 📈",
+    tagline:
+      "A full-stack stock portfolio management app with real-time updates, alerts, and market data integration.",
+    features: [
+      "JWT-based user authentication and registration",
+      "Create, manage, and track multiple stock portfolios",
+      "Live stock price updates via WebSocket and Kafka",
+      "Set price alerts with real-time notifications",
+      "Interactive historical stock charts and market news",
+      "Responsive dashboard with search and portfolio views",
+      "Redis caching and background services for performance",
+      "Swagger API documentation and health monitoring",
+    ],
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "SignalR",
+      "Axios",
+      ".NET Core Web API",
+      "SQL Server",
+      "Entity Framework Core",
+      "Redis",
+      "Apache Kafka",
+      "Swagger",
+    ],
+    live: null,
+    code: "https://github.com/Brielle28/StockHub",
+    category: "Full-Stack",
+    image: "/sa.png", // Replace with actual image path
+    video: null, // Optional demo video
+    createdBy: "Brielle28",
+    date: "01/07/2025",
+    role: "Full-Stack Developer",
+    duration: "Built over 4 weeks – June 2025",
+    status: "In Progress",
+    description:
+      "StockHub is a powerful stock portfolio management platform designed for users to track and analyze their investments in real-time. With secure JWT authentication, users can register, log in, and manage multiple portfolios. It features live price updates via Kafka and SignalR, historical price charts, customizable price alerts, and a real-time news feed. The frontend is built using React with a responsive, modern UI powered by Tailwind CSS. The backend is a robust .NET Core API integrated with SQL Server, Redis for caching, and Kafka for message streaming. StockHub ensures a smooth and scalable experience through clean architecture, background services, and health monitoring. It is ideal for finance enthusiasts and developers learning real-time, event-driven systems.",
   },
   {
     id: 3,
@@ -38,7 +87,13 @@ export const projects = [
       "Task search functionality",
       "Responsive UI",
     ],
-    techStack: ["React", "Tailwind CSS", "LocalStorage", "Date-fns","React-icons"],
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "LocalStorage",
+      "Date-fns",
+      "React-icons",
+    ],
     live: "https://task-management-sigma-sage.vercel.app/",
     code: "https://github.com/Brielle28/Task-Management",
     category: "React",
@@ -64,7 +119,15 @@ export const projects = [
       "Copy to Clipboard",
       "Delete QR Codes",
     ],
-    techStack: ["React","React Router", "Daisy ui", "UUID","Local Storage", "Tailwind CSS", "QRCode.react"],
+    techStack: [
+      "React",
+      "React Router",
+      "Daisy ui",
+      "UUID",
+      "Local Storage",
+      "Tailwind CSS",
+      "QRCode.react",
+    ],
     live: "",
     code: "https://github.com/Brielle28/SwiftQR",
     category: "React",
@@ -90,7 +153,13 @@ export const projects = [
       "Synonym suggestions",
       "Source link",
     ],
-    techStack: ["React", "TypeScript", "Axios", "Dictionary API", "Tailwind Css"],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Axios",
+      "Dictionary API",
+      "Tailwind Css",
+    ],
     live: "https://webdictionary-ten.vercel.app/",
     code: "https://github.com/Brielle28/webdictionary",
     category: "TypeScript",
@@ -156,131 +225,127 @@ export const projects = [
       "NotesApp is a React-based note-taking tool that supports color themes, inline editing, and persistent local storage, making it ideal for fast, reliable personal note management.",
   },
   {
-  id: 7,
-  title: "VoiceNote: Voice Recording App 🎙️",
-  tagline: "Record, manage, and download voice notes with ease.",
-  features: [
-    "Splash Screen with modern UI",
-    "Start, stop, and save recordings",
-    "Live timer display",
-    "Searchable & filterable recording list",
-    "Edit, delete, and download recordings",
-    "Responsive layout for all devices"
-  ],
-  techStack: [
-    "React",
-    "React Router",
-    "Tailwind CSS",
-    "React Icons",
-    "Context API",
-    "react-media-recorder"
-  ],
-  live: "https://voice-note-vert.vercel.app/", // Add the deployed link if available
-  code: "https://github.com/Brielle28/VoiceNote",
-  category: "React",
-  image: "/VN.png", // Replace with your actual image path
-  video: "/voice-animation.mp4", // Optional
-  createdBy: "Brielle28",
-  date: "01/06/2025",
-  role: "Sole Developer",
-  duration: "Built in 1 week – May 2025",
-  status: "Completed",
-  description:
-    "VoiceNote is a modern voice recording web app that allows users to easily record, playback, and manage audio recordings. Features include a splash screen, real-time timer, searchable recordings list, and options to edit, delete, and download audio files. Built using React, Tailwind CSS, and the react-media-recorder library for a seamless and intuitive experience."
-},
-{
-  id: 8,
-  title: "Speech-to-Text Web Application 🗣️",
-  tagline: "Convert your speech into real-time text with a clean and interactive UI.",
-  features: [
-    "Real-Time Transcription using Web Speech API",
-    "Start/Stop recording with mic controls",
-    "Copy or delete transcribed text",
-    "Microphone access in supported browsers",
-    "Responsive design across mobile and desktop",
-    "Built-in state management using React Context API"
-  ],
-  techStack: [
-    "React",
-    "Web Speech API",
-    "Tailwind CSS",
-    "React Icons",
-    "Context API"
-  ],
-  live: "https://voice-to-speech-three.vercel.app/",
-  code: "https://github.com/Brielle28/speech-to-text-app",
-  category: "React",
-  image: "/STT.png", // Replace with actual image filename
-  video: "/speech-to-text.mp4", // Optional if demo video exists
-  createdBy: "Brielle28",
-  date: "01/06/2025",
-  role: "Sole Developer",
-  duration: "Built in 1 week – May 2025",
-  status: "Completed",
-  description:
-    "This Speech-to-Text Web App is a lightweight and efficient transcription tool built with React, Tailwind CSS, and the Web Speech API. It allows users to record speech using their microphone and transcribe it into editable text in real time. The app supports copying or deleting text, and features a responsive, clean UI for accessibility and ease of use. Ideal for note-taking, dictation, and accessibility-focused users."
-},
-{
-  id: 9,
-  title: "Password Generator 🔐",
-  tagline: "Generate secure passwords with customizable options and strength indicator.",
-  features: [
-    "Adjustable password length (1–30 characters)",
-    "Include/exclude uppercase, lowercase, numbers, and symbols",
-    "Real-time password strength indicator (Weak, Medium, Strong, Very Strong)",
-    "Copy to clipboard functionality",
-    "Responsive and clean user interface"
-  ],
-  techStack: [
-    "React",
-    "React Icons",
-    "CSS Modules",
-    "DaisyUI"
-  ],
-  live: "https://password-generator.vercel.app/", // Replace with actual link if different
-  code: "https://github.com/Brielle28/PasswordGenerator",
-  category: "React",
-  image: "/PG.png", // Replace with actual screenshot or thumbnail
-  video: "/Password_generator.mp4", // Optional
-  createdBy: "Brielle28",
-  date: "01/06/2025",
-  role: "Sole Developer",
-  duration: "Built in 3 days – May 2025",
-  status: "Completed",
-  description:
-    "The Password Generator App is a customizable tool built with React, designed to help users generate secure passwords with ease. Users can adjust the character length, choose which types of characters to include (uppercase, lowercase, numbers, symbols), and view a real-time strength meter. A copy-to-clipboard button allows users to instantly copy generated passwords, making it a handy tool for both personal and professional use."
-},
-{
-  id: 10,
-  title: "Dessert product Cart 🛒",
-  tagline: "A mock online dessert store with cart and order functionality.",
-  features: [
-    "Responsive design optimized for all screen sizes",
-    "Product list with quantity controls and total price calculation",
-    "Add to cart and remove functionality",
-    "Order confirmation and thank you screen",
-    "E2E testing with Cypress for user flows"
-  ],
-  techStack: [
-    "React",
-    "React Router",
-    "Tailwind CSS",
-    "Daisy UI",
-    "React Icons",
-    "Cypress"
-  ],
-  live: "https://product-cart-list-learning-cypress.vercel.app/",
-  code: "https://github.com/Brielle28/product-cart-list-learning-cypress",
-  category: "React",
-  image: "/CA.png", // Replace with actual image path
-  video: null,
-  createdBy: "Brielle28",
-  date: "01/06/2025",
-  role: "Sole Developer",
-  duration: "Built in 5 days – May 2025",
-  status: "Completed",
-  description:
-    "This dessert-themed web application simulates an online shopping experience where users can browse a variety of dessert products, add them to a cart, adjust quantities, and confirm their orders. The app provides interactive components such as increment and decrement controls, real-time total price calculation, and a final order confirmation screen. Designed with responsiveness in mind, it works seamlessly across devices. The application was also tested using Cypress to ensure key user flows—like adding items to the cart and checking out—work reliably. Built with React, Tailwind CSS, and Daisy UI, this project emphasizes usability, clean layout, and functional state management via React Context."
-}
-
+    id: 7,
+    title: "VoiceNote: Voice Recording App 🎙️",
+    tagline: "Record, manage, and download voice notes with ease.",
+    features: [
+      "Splash Screen with modern UI",
+      "Start, stop, and save recordings",
+      "Live timer display",
+      "Searchable & filterable recording list",
+      "Edit, delete, and download recordings",
+      "Responsive layout for all devices",
+    ],
+    techStack: [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "React Icons",
+      "Context API",
+      "react-media-recorder",
+    ],
+    live: "https://voice-note-vert.vercel.app/", // Add the deployed link if available
+    code: "https://github.com/Brielle28/VoiceNote",
+    category: "React",
+    image: "/VN.png", // Replace with your actual image path
+    video: "/voice-animation.mp4", // Optional
+    createdBy: "Brielle28",
+    date: "01/06/2025",
+    role: "Sole Developer",
+    duration: "Built in 1 week – May 2025",
+    status: "Completed",
+    description:
+      "VoiceNote is a modern voice recording web app that allows users to easily record, playback, and manage audio recordings. Features include a splash screen, real-time timer, searchable recordings list, and options to edit, delete, and download audio files. Built using React, Tailwind CSS, and the react-media-recorder library for a seamless and intuitive experience.",
+  },
+  {
+    id: 8,
+    title: "Speech-to-Text Web Application 🗣️",
+    tagline:
+      "Convert your speech into real-time text with a clean and interactive UI.",
+    features: [
+      "Real-Time Transcription using Web Speech API",
+      "Start/Stop recording with mic controls",
+      "Copy or delete transcribed text",
+      "Microphone access in supported browsers",
+      "Responsive design across mobile and desktop",
+      "Built-in state management using React Context API",
+    ],
+    techStack: [
+      "React",
+      "Web Speech API",
+      "Tailwind CSS",
+      "React Icons",
+      "Context API",
+    ],
+    live: "https://voice-to-speech-three.vercel.app/",
+    code: "https://github.com/Brielle28/speech-to-text-app",
+    category: "React",
+    image: "/STT.png", // Replace with actual image filename
+    video: "/speech-to-text.mp4", // Optional if demo video exists
+    createdBy: "Brielle28",
+    date: "01/06/2025",
+    role: "Sole Developer",
+    duration: "Built in 1 week – May 2025",
+    status: "Completed",
+    description:
+      "This Speech-to-Text Web App is a lightweight and efficient transcription tool built with React, Tailwind CSS, and the Web Speech API. It allows users to record speech using their microphone and transcribe it into editable text in real time. The app supports copying or deleting text, and features a responsive, clean UI for accessibility and ease of use. Ideal for note-taking, dictation, and accessibility-focused users.",
+  },
+  {
+    id: 9,
+    title: "Password Generator 🔐",
+    tagline:
+      "Generate secure passwords with customizable options and strength indicator.",
+    features: [
+      "Adjustable password length (1–30 characters)",
+      "Include/exclude uppercase, lowercase, numbers, and symbols",
+      "Real-time password strength indicator (Weak, Medium, Strong, Very Strong)",
+      "Copy to clipboard functionality",
+      "Responsive and clean user interface",
+    ],
+    techStack: ["React", "React Icons", "CSS Modules", "DaisyUI"],
+    live: "https://password-generator.vercel.app/", // Replace with actual link if different
+    code: "https://github.com/Brielle28/PasswordGenerator",
+    category: "React",
+    image: "/PG.png", // Replace with actual screenshot or thumbnail
+    video: "/Password_generator.mp4", // Optional
+    createdBy: "Brielle28",
+    date: "01/06/2025",
+    role: "Sole Developer",
+    duration: "Built in 3 days – May 2025",
+    status: "Completed",
+    description:
+      "The Password Generator App is a customizable tool built with React, designed to help users generate secure passwords with ease. Users can adjust the character length, choose which types of characters to include (uppercase, lowercase, numbers, symbols), and view a real-time strength meter. A copy-to-clipboard button allows users to instantly copy generated passwords, making it a handy tool for both personal and professional use.",
+  },
+  {
+    id: 10,
+    title: "Dessert product Cart 🛒",
+    tagline: "A mock online dessert store with cart and order functionality.",
+    features: [
+      "Responsive design optimized for all screen sizes",
+      "Product list with quantity controls and total price calculation",
+      "Add to cart and remove functionality",
+      "Order confirmation and thank you screen",
+      "E2E testing with Cypress for user flows",
+    ],
+    techStack: [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "Daisy UI",
+      "React Icons",
+      "Cypress",
+    ],
+    live: "https://product-cart-list-learning-cypress.vercel.app/",
+    code: "https://github.com/Brielle28/product-cart-list-learning-cypress",
+    category: "React",
+    image: "/CA.png", // Replace with actual image path
+    video: null,
+    createdBy: "Brielle28",
+    date: "01/06/2025",
+    role: "Sole Developer",
+    duration: "Built in 5 days – May 2025",
+    status: "Completed",
+    description:
+      "This dessert-themed web application simulates an online shopping experience where users can browse a variety of dessert products, add them to a cart, adjust quantities, and confirm their orders. The app provides interactive components such as increment and decrement controls, real-time total price calculation, and a final order confirmation screen. Designed with responsiveness in mind, it works seamlessly across devices. The application was also tested using Cypress to ensure key user flows—like adding items to the cart and checking out—work reliably. Built with React, Tailwind CSS, and Daisy UI, this project emphasizes usability, clean layout, and functional state management via React Context.",
+  },
 ];
