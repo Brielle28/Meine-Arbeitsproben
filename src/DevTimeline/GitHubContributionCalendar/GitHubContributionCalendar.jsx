@@ -43,15 +43,6 @@ const GitHubContributionCalendar = () => {
     "Dec",
   ];
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  // Function to get pink color based on contribution count
-  // const getPinkColor = (count) => {
-  //   if (count === 0) return '#ebedf0';  // Empty
-  //   if (count <= 2) return '#fcdfeb';   // Light pink
-  //   if (count <= 5) return '#f8bbd0';   // Medium-light pink
-  //   if (count <= 10) return '#f48fb1';  // Medium pink
-  //   return '#ec407a';                   // Deep pink
-  // };
   const getPinkColor = (count) => {
     if (count === 0) return "#ebedf0"; // Empty
     if (count <= 2) return "#ffd1e3"; // Brighter light pink
@@ -70,7 +61,7 @@ const GitHubContributionCalendar = () => {
             {new Date().getFullYear()}
           </span>
         </div>
-        <div className="block md:hidden overflow-x-auto">
+        <div className="block overflow-x-auto">
           <div className="calendar-months">
             {months.map((month) => (
               <div key={month} className="calendar-month">
