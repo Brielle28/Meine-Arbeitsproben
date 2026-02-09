@@ -35,48 +35,6 @@ export const projects = [
       "Fresh Finds is a responsive e-commerce application for groceries. It features category browsing, liking and cart functionality, dynamic product detail views, and a seamless checkout experience, all wrapped in a responsive, user-friendly design.",
   },
   {
-    id: 11,
-    title: "StockHub 📈",
-    tagline:
-      "A full-stack stock portfolio management app with real-time updates, alerts, and market data integration.",
-    features: [
-      "JWT-based user authentication and registration",
-      "Create, manage, and track multiple stock portfolios",
-      "Live stock price updates via WebSocket and Kafka",
-      "Set price alerts with real-time notifications",
-      "Interactive historical stock charts and market news",
-      "Responsive dashboard with search and portfolio views",
-      "Redis caching and background services for performance",
-      "Swagger API documentation and health monitoring",
-    ],
-    techStack: [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "React Router",
-      "SignalR",
-      "Axios",
-      ".NET Core Web API",
-      "SQL Server",
-      "Entity Framework Core",
-      "Redis",
-      "Apache Kafka",
-      "Swagger",
-    ],
-    live: null,
-    code: "https://github.com/Brielle28/StockHub",
-    category: "Full-Stack",
-    image: "/sa.png", // Replace with actual image path
-    video: null, // Optional demo video
-    createdBy: "Brielle28",
-    date: "01/07/2025",
-    role: "Full-Stack Developer",
-    duration: "Built over 4 weeks – June 2025",
-    status: "In Progress",
-    description:
-      "StockHub is a powerful stock portfolio management platform designed for users to track and analyze their investments in real-time. With secure JWT authentication, users can register, log in, and manage multiple portfolios. It features live price updates via Kafka and SignalR, historical price charts, customizable price alerts, and a real-time news feed. The frontend is built using React with a responsive, modern UI powered by Tailwind CSS. The backend is a robust .NET Core API integrated with SQL Server, Redis for caching, and Kafka for message streaming. StockHub ensures a smooth and scalable experience through clean architecture, background services, and health monitoring. It is ideal for finance enthusiasts and developers learning real-time, event-driven systems.",
-  },
-  {
     id: 3,
     title: "Task Management Application",
     tagline: "Plan, track, and manage tasks efficiently.",
@@ -173,6 +131,7 @@ export const projects = [
     description:
       "WebDictionary is a modern React-based dictionary app that allows users to look up definitions, hear pronunciation, see examples, and find synonyms of words.",
   },
+
   {
     id: 5,
     title: "Student Registry Application",
@@ -348,4 +307,47 @@ export const projects = [
     description:
       "This dessert-themed web application simulates an online shopping experience where users can browse a variety of dessert products, add them to a cart, adjust quantities, and confirm their orders. The app provides interactive components such as increment and decrement controls, real-time total price calculation, and a final order confirmation screen. Designed with responsiveness in mind, it works seamlessly across devices. The application was also tested using Cypress to ensure key user flows—like adding items to the cart and checking out—work reliably. Built with React, Tailwind CSS, and Daisy UI, this project emphasizes usability, clean layout, and functional state management via React Context.",
   },
+    {
+    id: 11,
+    title: "StockHub 📈",
+    tagline:
+      "A full-stack stock portfolio management app with real-time updates, alerts, and market data integration.",
+    features: [
+      "JWT-based user authentication and registration",
+      "Create, manage, and track multiple stock portfolios",
+      "Live stock price updates via WebSocket and Kafka",
+      "Set price alerts with real-time notifications",
+      "Interactive historical stock charts and market news",
+      "Responsive dashboard with search and portfolio views",
+      "Redis caching and background services for performance",
+      "Swagger API documentation and health monitoring",
+    ],
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "SignalR",
+      "Axios",
+      ".NET Core Web API",
+      "SQL Server",
+      "Entity Framework Core",
+      "Redis",
+      "Apache Kafka",
+      "Swagger",
+    ],
+    live: null,
+    code: "https://github.com/Brielle28/StockHub",
+    category: "Full-Stack",
+    image: "/sa.png", // Replace with actual image path
+    video: null, // Optional demo video
+    createdBy: "Brielle28",
+    date: "01/07/2025",
+    role: "Full-Stack Developer",
+    duration: "Built over 4 weeks – June 2025",
+    status: "In Progress",
+    description:
+      "StockHub is a powerful stock portfolio management platform designed for users to track and analyze their investments in real-time. With secure JWT authentication, users can register, log in, and manage multiple portfolios. It features live price updates via Kafka and SignalR, historical price charts, customizable price alerts, and a real-time news feed. The frontend is built using React with a responsive, modern UI powered by Tailwind CSS. The backend is a robust .NET Core API integrated with SQL Server, Redis for caching, and Kafka for message streaming. StockHub ensures a smooth and scalable experience through clean architecture, background services, and health monitoring. It is ideal for finance enthusiasts and developers learning real-time, event-driven systems.",
+  },
+  
 ];
